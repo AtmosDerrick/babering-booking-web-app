@@ -5,6 +5,7 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faCircleInfo,
+  faClockRotateLeft,
   faGift,
   faHouse,
   faXmark,
@@ -16,7 +17,7 @@ function NavBar() {
   const [menu, setMenu] = useState(false);
   return (
     <div>
-      <div className="h-[10vh] py-2 bg-primary flex justify-between items-center px-4">
+      <div className=" w-full fixed h-[10vh] py-2 bg-primary flex justify-between items-center px-4">
         <div className="text-center">
           <button
             onClick={() => {
@@ -50,7 +51,7 @@ function NavBar() {
       <div
         className={
           menu
-            ? "absolute h-[90vh] bg-secondary w-3/4 shadow-sm bg-opacity-90 transition-all"
+            ? "fixed h-[90vh] mt-16 bg-secondary w-3/4 shadow-sm bg-opacity-90 transition-all"
             : "absolute ml-[-40rem] transition-all h-[90vh]"
         }>
         <div>
@@ -77,6 +78,11 @@ function NavBar() {
             <FontAwesomeIcon icon={faHeart} className="text-lg" />
 
             <span className="pl-2"> Favourite Saloon / Stylist</span>
+          </li>
+          <li className="mb-10 text-dark_primary  text-sm">
+            <FontAwesomeIcon icon={faClockRotateLeft} className="text-lg" />
+
+            <span className="pl-2"> History</span>
           </li>
           <li className="mb-10 text-dark_primary  text-sm">
             <FontAwesomeIcon icon={faGift} className="text-lg" />
