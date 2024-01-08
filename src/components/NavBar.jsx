@@ -43,7 +43,7 @@ function NavBar() {
           </button>
         </div>
         <div>
-          <div className="text-sm text-white">
+          <div className="text-sm text-secondary">
             <FontAwesomeIcon icon={faBell} className="text-lg" />
           </div>
         </div>
@@ -51,7 +51,7 @@ function NavBar() {
       <div
         className={
           menu
-            ? "fixed h-[90vh] mt-16 bg-secondary w-3/4 shadow-sm bg-opacity-90 transition-all"
+            ? "fixed h-[90vh] mt-16 z-10 bg-secondary w-3/4 shadow-sm bg-opacity-90 transition-all"
             : "absolute ml-[-40rem] transition-all h-[90vh]"
         }>
         <div>
