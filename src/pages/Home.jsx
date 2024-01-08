@@ -5,13 +5,15 @@ import Shops from "../components/Shops";
 
 function Home() {
   return (
-    <div>
+    <div className="">
       <NavBar />
-      <div>
-        <ShopCodeInput />
-      </div>
-      <div>
-        <Shops />
+      <div className="absolute top-[10vh] w-full">
+        <div className="">
+          <ShopCodeInput />
+        </div>
+        <div className="">
+          <Shops />
+        </div>
       </div>
     </div>
   );

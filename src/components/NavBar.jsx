@@ -12,12 +12,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
   return (
-    <div>
-      <div className=" w-full fixed h-[10vh] py-2 bg-primary flex justify-between items-center px-4">
+    <div className="">
+      <div className=" w-full z-30 fixed h-[10vh] py-2 bg-primary flex justify-between items-center px-4">
         <div className="text-center">
           <button
             onClick={() => {
@@ -63,37 +64,49 @@ function NavBar() {
           </div>
         </div>
         <ul className="px-2 mt-12">
-          <li className="mb-10 text-dark_primary  text-sm">
-            <FontAwesomeIcon icon={faHouse} className="text-lg" />
+          <Link to="/">
+            <li className="mb-10 text-dark_primary  text-sm">
+              <FontAwesomeIcon icon={faHouse} className="text-lg" />
 
-            <span className="pl-2"> Home</span>
-          </li>
+              <span className="pl-2"> Home</span>
+            </li>
+          </Link>
 
-          <li className="mb-10 text-dark_primary  text-sm">
-            <FontAwesomeIcon icon={faCalendarCheck} className="text-lg" />
+          <Link>
+            <li className="mb-10 text-dark_primary  text-sm">
+              <FontAwesomeIcon icon={faCalendarCheck} className="text-lg" />
 
-            <span className="pl-2"> Appointments</span>
-          </li>
-          <li className="mb-10 text-dark_primary  text-sm">
-            <FontAwesomeIcon icon={faHeart} className="text-lg" />
+              <span className="pl-2"> Appointments</span>
+            </li>
+          </Link>
+          <Link>
+            <li className="mb-10 text-dark_primary  text-sm">
+              <FontAwesomeIcon icon={faHeart} className="text-lg" />
 
-            <span className="pl-2"> Favourite Saloon / Stylist</span>
-          </li>
-          <li className="mb-10 text-dark_primary  text-sm">
-            <FontAwesomeIcon icon={faClockRotateLeft} className="text-lg" />
+              <span className="pl-2"> Favourite Saloon / Stylist</span>
+            </li>
+          </Link>
+          <Link>
+            <li className="mb-10 text-dark_primary  text-sm">
+              <FontAwesomeIcon icon={faClockRotateLeft} className="text-lg" />
 
-            <span className="pl-2"> History</span>
-          </li>
-          <li className="mb-10 text-dark_primary  text-sm">
-            <FontAwesomeIcon icon={faGift} className="text-lg" />
+              <span className="pl-2"> History</span>
+            </li>
+          </Link>
+          <Link>
+            <li className="mb-10 text-dark_primary  text-sm">
+              <FontAwesomeIcon icon={faGift} className="text-lg" />
 
-            <span className="pl-2"> Promotions</span>
-          </li>
-          <li className="mb-10 text-dark_primary  text-sm">
-            <FontAwesomeIcon icon={faCircleInfo} className="text-lg" />
+              <span className="pl-2"> Promotions</span>
+            </li>
+          </Link>
+          <Link>
+            <li className="mb-10 text-dark_primary  text-sm">
+              <FontAwesomeIcon icon={faCircleInfo} className="text-lg" />
 
-            <span className="pl-2"> Help & Support</span>
-          </li>
+              <span className="pl-2"> Help & Support</span>
+            </li>
+          </Link>
         </ul>
         <div className="absolute bottom-10 font-bold text-base pl-4">
           <p>Logout</p>
