@@ -7,6 +7,7 @@ import {
   faLayerGroup,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 function MainShop() {
   const shop = {
@@ -65,27 +66,45 @@ function MainShop() {
                 </div>
               </div>
               <div className="w-full px-2 mt-12 ">
-                <button className="border-primary flex justify-center gap-4 border-2 text-primary rounded-md w-full py-2  font-medium">
+                <button className="border-primary items-center flex justify-center gap-4 border-2 text-primary rounded-md w-full py-2  font-medium">
                   Join the Queue{" "}
                   <h3 className="text-xs text-primary font-semibold">
                     <FontAwesomeIcon
                       icon={faLayerGroup}
                       className="text-dark_primary"
                     />
-                    <span className="text-base text-black drop-shadow-sm pl-1">
+                    <span className="text-sm text-black drop-shadow-sm pl-1">
                       4
                     </span>
                   </h3>
-                </button>
-                <button className="bg-primary flex justify-center gap-4 w-full py-2  rounded-md text-white font-medium mt-4">
-                  Book Protocol
                   <h3 className="text-xs text-primary font-semibold">
                     <FontAwesomeIcon
-                      icon={faLayerGroup}
-                      className="text-secondary"
+                      icon={faClock}
+                      className="text-dark_primary text-sm"
                     />
-                    <span className="text-base text-white drop-shadow-sm pl-1">
-                      1
+                    <span className="text-sm text-black drop-shadow-sm pl-1">
+                      1hr:30min
+                    </span>
+                  </h3>
+                </button>
+                <button className="bg-primary text-white mt-8 items-center flex justify-center gap-4 border-2  rounded-md w-full py-2  font-medium">
+                  Book Protocol
+                  <h3 className="text-xs text-white font-semibold">
+                    <FontAwesomeIcon
+                      icon={faLayerGroup}
+                      className="text-white"
+                    />
+                    <span className="text-sm text-secondary drop-shadow-sm pl-1">
+                      4
+                    </span>
+                  </h3>
+                  <h3 className="text-xs text-white font-semibold">
+                    <FontAwesomeIcon
+                      icon={faClock}
+                      className="text-white text-sm"
+                    />
+                    <span className="text-sm text-white  drop-shadow-sm pl-1">
+                      15min
                     </span>
                   </h3>
                 </button>
