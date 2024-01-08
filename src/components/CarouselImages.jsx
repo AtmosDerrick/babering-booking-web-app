@@ -20,7 +20,7 @@ const ImageCarousel = ({ images }) => {
           <img
             src={imageUrl}
             alt={`Slide ${index + 1}`}
-            className="w-full h-[30vh] rounded-lg"
+            className="w-full h-[30vh] "
           />
         </div>
       ))}
