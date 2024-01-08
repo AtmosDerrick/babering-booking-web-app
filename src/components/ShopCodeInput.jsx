@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 import Pattern from "../Assets/Images/pattern.png";
@@ -6,9 +7,20 @@ import Pattern from "../Assets/Images/pattern.png";
 function ShopCodeInput() {
   const [shopcode, setshopcode] = useState("");
 
+  const navigate = useNavigate();
+
   const handleInputChange = (e) => {
     setshopcode(e.target.value);
   };
+
+  const handleSend = () => {
+    if (shopcode !== "") {
+      navigate("/mainshop");
+    } else {
+      alert("enter shop code");
+    }
+  };
+
   return (
     <div
       className="h-[25vh] flex justify-center items-center px-2"
@@ -21,7 +33,7 @@ function ShopCodeInput() {
         onChange={handleInputChange}
         className="text-base w-full mr-2 rounded-md p-2"
       />
-      <button>
+      <button onClick={handleSend}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
