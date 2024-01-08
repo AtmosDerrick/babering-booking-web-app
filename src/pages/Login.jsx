@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../Assets/Images/glamque logo1.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -49,7 +50,9 @@ const Login = () => {
               <div className="absolute bottom-6 text-center ">
                 <p className="w-full text-center text-gray">
                   I don't have an account{" "}
-                  <span className="text-secondary drop-shadow-sm">Signup</span>
+                  <Link className="text-secondary drop-shadow-sm" to="/signup">
+                    Signup
+                  </Link>
                 </p>
               </div>
             </div>
