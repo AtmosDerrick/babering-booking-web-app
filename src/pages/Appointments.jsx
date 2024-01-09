@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import ImageCarousel from "../components/CarouselImages";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
+import PopUp from "../components/PopUp";
 
 function Appointments({ images }) {
   const shop = {
@@ -31,6 +32,7 @@ function Appointments({ images }) {
   return (
     <div className="bg-gray">
       <NavBar />
+
       <div className="absolute top-[10vh]   h-[90vh] w-full overflow-hidden">
         <ImageCarousel images={shop.images} />
         <div className="pt-6 px-2">
@@ -41,13 +43,21 @@ function Appointments({ images }) {
 
         <div className="mt-4 px-2 flex justify-between items-center">
           <div>
-            <button className="bg-primary py-2 px-4 text-white font-medium rounded-md">
-              ReSchedule
+            <button className="bg-primary py-2 px-2 text-white font-medium rounded-md">
+              <PopUp
+                word="Reschedule "
+                instruction="Are you sure you want to reschedule?"
+                closeBtn={true}
+              />
             </button>
           </div>
           <div>
-            <button className="bg-primary py-2 px-4 text-white font-medium rounded-md">
-              Leave Queue
+            <button className="border-primary border-b-2 shadow-md py-2 px-2 text-primary font-medium ">
+              <PopUp
+                word="Leave Queue "
+                instruction="Are you sure you want leave the Queue?"
+                closeBtn={true}
+              />
             </button>
           </div>
         </div>

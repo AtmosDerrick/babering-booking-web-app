@@ -43,8 +43,9 @@ function NavBar() {
             )}
           </button>
         </div>
+        <div className="text-base font-medium text-secondary">GemQueue</div>
         <div>
-          <div className="text-sm text-secondary">
+          <div className="text-sm text-white">
             <FontAwesomeIcon icon={faBell} className="text-lg" />
           </div>
         </div>
