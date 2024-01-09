@@ -72,7 +72,7 @@ function NavBar() {
             </li>
           </Link>
 
-          <Link>
+          <Link to="/appointments">
             <li className="mb-10 text-dark_primary  text-sm">
               <FontAwesomeIcon icon={faCalendarCheck} className="text-lg" />
 
