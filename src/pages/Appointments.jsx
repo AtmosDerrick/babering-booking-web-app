@@ -26,9 +26,6 @@ function Appointments({ images }) {
     { id: 5, name: "Eve", queueNumber: 105 },
     { id: 6, name: "Frank", queueNumber: 106 },
     { id: 7, name: "Grace", queueNumber: 107 },
-    { id: 8, name: "Hank", queueNumber: 108 },
-    { id: 9, name: "Ivy", queueNumber: 109 },
-    { id: 10, name: "Jack", queueNumber: 110 },
   ];
 
   return (
@@ -55,7 +52,7 @@ function Appointments({ images }) {
           </div>
         </div>
 
-        <div className="px-2 mt-2 bg-primary h-full rounded-s-3xl pt-2 overflow-scroll">
+        <div className="px-2 mt-2 bg-primary h-full rounded-s-3xl pt-2 ">
           {queue.map((item) => (
             <div
               className={
