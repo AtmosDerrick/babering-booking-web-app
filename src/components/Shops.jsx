@@ -81,8 +81,6 @@ function Shops() {
 
   const navigate = useNavigate();
 
-  const openShop = () => {};
-
   return (
     <div className="bg-white py-2">
       <h3 className="py-4 text-sm px-2 font-bold">Near By Shops </h3>

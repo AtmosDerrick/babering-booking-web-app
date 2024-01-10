@@ -24,10 +24,10 @@ function MainShop() {
     ratings: 4.2,
   };
   return (
-    <div className="w-full overflow-hidden">
+    <div className="  w-full overflow-hidden bg-white ">
       <NavBar />
-      <div>
-        <div className="absolute top-[10vh] bg-gray  h-[90vh] w-full overflow-hidden ">
+      <div className=" lg:w-1/2 lg:mx-auto">
+        <div className="absolute top-[10vh] bg-gray  h-[90vh] w-full overflow-hidden lg:w-1/2 lg:mx-auto ">
           <ImageCarousel images={shop.images} />
           <div
             className="mt-8
@@ -104,7 +104,7 @@ function MainShop() {
                       className="text-dark_primary"
                     />
                     <span className="text-sm text-black drop-shadow-sm pl-1">
-                      4
+                      9
                     </span>
                   </h3>
                   <h3 className="text-xs text-primary font-semibold">

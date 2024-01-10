@@ -33,60 +33,62 @@ function Appointments({ images }) {
     <div className="bg-gray">
       <NavBar />
 
-      <div className="absolute top-[10vh]   h-[90vh] w-full overflow-hidden">
-        <ImageCarousel images={shop.images} />
-        <div className="pt-6 px-2">
-          <h2 className="text-base  text-center font-semibold text-dark_primary">
-            {shop.name}
-          </h2>
-        </div>
-
-        <div className="mt-4 px-2 flex justify-between items-center">
-          <div>
-            <button className="bg-primary py-2 px-2 text-white font-medium rounded-md">
-              <PopUp
-                word="Reschedule "
-                instruction="Are you sure you want to reschedule?"
-                closeBtn={true}
-              />
-            </button>
+      <div className="lg:w-1/2 lg:mx-auto">
+        <div className="absolute top-[10vh]   h-[90vh] w-full overflow-hidden lg:w-1/2 lg:mx-auto">
+          <ImageCarousel images={shop.images} />
+          <div className="pt-6 px-2">
+            <h2 className="text-base  text-center font-semibold text-dark_primary">
+              {shop.name}
+            </h2>
           </div>
-          <div>
-            <button className="border-primary border-b-2 shadow-md py-2 px-2 text-primary font-medium ">
-              <PopUp
-                word="Leave Queue "
-                instruction="Are you sure you want leave the Queue?"
-                closeBtn={true}
-              />
-            </button>
-          </div>
-        </div>
 
-        <div className="px-2 mt-2 bg-primary h-full rounded-s-3xl pt-2 ">
-          {queue.map((item) => (
-            <div
-              className={
-                item.id == "5"
-                  ? "flex justify-start items-center gap-2 bg-gray py-2 pb-1"
-                  : "flex justify-start gap-2 py-2 pb-1 text-white"
-              }>
-              <div>{item.queueNumber}</div>
-              <div>{item.name}</div>
-              {item.id == "5" ? (
-                <h3 className="text-xs text-white font-semibold w-full text-right pr-4">
-                  <FontAwesomeIcon
-                    icon={faClock}
-                    className="text-primary text-sm "
-                  />
-                  <span className="text-sm text-primary drop-shadow-sm pl-1">
-                    15min
-                  </span>
-                </h3>
-              ) : (
-                ""
-              )}
+          <div className="mt-4 px-2 flex justify-between items-center">
+            <div>
+              <button className="bg-primary py-2 px-2 text-white font-medium rounded-md">
+                <PopUp
+                  word="Reschedule "
+                  instruction="Are you sure you want to reschedule?"
+                  closeBtn={true}
+                />
+              </button>
             </div>
-          ))}
+            <div>
+              <button className="border-primary border-b-2 shadow-md py-2 px-2 text-primary font-medium ">
+                <PopUp
+                  word="Leave Queue "
+                  instruction="Are you sure you want leave the Queue?"
+                  closeBtn={true}
+                />
+              </button>
+            </div>
+          </div>
+
+          <div className="px-2 mt-2 bg-primary h-full rounded-s-3xl pt-2 ">
+            {queue.map((item) => (
+              <div
+                className={
+                  item.id == "5"
+                    ? "flex justify-start items-center gap-2 bg-gray py-2 pb-1"
+                    : "flex justify-start gap-2 py-2 pb-1 text-white"
+                }>
+                <div>{item.queueNumber}</div>
+                <div>{item.name}</div>
+                {item.id == "5" ? (
+                  <h3 className="text-xs text-white font-semibold w-full text-right pr-4">
+                    <FontAwesomeIcon
+                      icon={faClock}
+                      className="text-primary text-sm "
+                    />
+                    <span className="text-sm text-primary drop-shadow-sm pl-1">
+                      15min
+                    </span>
+                  </h3>
+                ) : (
+                  ""
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

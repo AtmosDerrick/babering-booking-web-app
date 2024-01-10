@@ -17,8 +17,8 @@ import { Link } from "react-router-dom";
 function NavBar() {
   const [menu, setMenu] = useState(false);
   return (
-    <div className="">
-      <div className=" w-full z-30 fixed h-[10vh] py-2 bg-primary flex justify-between items-center px-4">
+    <div className="relative  lg:w-1/2 lg:mx-auto">
+      <div className="w-full lg:w-1/2  z-30 fixed h-[10vh] py-2 bg-primary flex justify-between items-center px-4">
         <div className="text-center">
           <button
             onClick={() => {
@@ -53,8 +53,8 @@ function NavBar() {
       <div
         className={
           menu
-            ? "fixed h-[90vh] mt-16 z-10 bg-secondary w-3/4 shadow-sm bg-opacity-90 transition-all"
-            : "absolute ml-[-40rem] transition-all h-[90vh]"
+            ? "fixed h-[90vh] mt-16 z-10 bg-secondary w-3/4 lg:w-1/4 shadow-sm bg-opacity-90 transition-all"
+            : "absolute ml-[-70rem]  transition-all h-[90vh] h-[90vh] mt-16"
         }>
         <div>
           <div className="flex justify-center pt-4">
@@ -80,7 +80,7 @@ function NavBar() {
               <span className="pl-2"> Appointments</span>
             </li>
           </Link>
-          <Link>
+          <Link to="/favourite">
             <li className="mb-10 text-dark_primary  text-sm">
               <FontAwesomeIcon icon={faHeart} className="text-lg" />
 

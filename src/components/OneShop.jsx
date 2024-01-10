@@ -6,7 +6,7 @@ function OneShop({ profileImage, name, location, status, ratings }) {
   return (
     <div className="w-full flex  justify-start gap-2">
       <div>
-        <img src={profileImage} className="bg-gray w-20 h-20 rounded-md" />
+        <img src={profileImage} className="bg-gray w-16 h-16 rounded-md" />
       </div>
       <div>
         <h2 className="text-base font-semibold text-dark_primary">{name}</h2>
